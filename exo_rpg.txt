@@ -1,0 +1,24 @@
+etape 1 :
+
+1- implémenter les classes avec variables et signature de méthodes (chaque variable est aléatoire)
+2- créer un héro avec les inputs consoles (choix du nom)
+3- créer un monstre automatiquement après la création du héro et les mettre dans la partie sans tableau (pas de ciblage)
+4- faire le héro cible le monstre et vice-versa
+5- faire attaquer aléatoirement monstre et héro en premier
+6- vérifier la mort d'un des deux à chaque tour
+
+A chaque tour faire un console.log
+" gentil.nom attaque méchant.nom et fait x dégats, ili rest y pv à méchant.nom et l'inverse"
+
+
+étape 2 : 
+
+7- choix de l'arme
+8- créer des équipes
+9- cibler aléatoirement 
+10- attaquer une fois adversaire
+11- vérifier mort
+
+étape 3 : 
+
+12- gérer système de classe des gentils
