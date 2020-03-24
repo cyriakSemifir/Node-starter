@@ -1,45 +1,54 @@
-class Personnage {
-    private nom: string
-    private pv: number
-    private pvMax: number
-    private defense: number
-    private arme: Arme
+import { Arme } from "./arme"
+
+export class Personnage {
+    private _nom: string
+    private _pv: number = 0
+    private _pvMax: number = 0
+    private _defense: number = 0
+    private _arme: Arme
 
     constructor(nom: string) {
-
+        this._nom = nom
+        this._pv;
+        this._pvMax;
+        this._defense;
+        this._arme;
     }
 
-    setNom(param: string) {
-        this.nom = param
-    }
-    getNom() {
-        return this.nom
+    set Nom(param: string) {
+        this._nom = param
     }
 
-    setPv(param: number) {
-        this.pv = param
-    }
-    getPv() {
-        return this.pv
+    get Nom() {
+        return this._nom
     }
 
-    setPvMax(param: number) {
-        this.pvMax = param
+    set Pv(param: number) {
+        this._pv = param
     }
-    getPvMax() {
-        return this.pvMax
-    }
-
-    setDefense(param: number) {
-        this.defense = param
-    }
-    getDefense() {
-        return this.defense
+    get Pv() {
+        return this._pv
     }
 
-    attaquer(cible) {
-
+    set PvMax(param: number) {
+        this._pvMax = param
     }
+
+    get PvMax() {
+        return this._pvMax
+    }
+
+    set Defense(param: number) {
+        this._defense = param
+    }
+
+    get Defense() {
+        return this._defense
+    }
+
+    // attaquer(cible) {
+
+    // }
 
     cibler() {
 
