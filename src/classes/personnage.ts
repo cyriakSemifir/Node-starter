@@ -1,6 +1,7 @@
 import { Arme } from "./arme"
 
 export class Personnage {
+
     private _nom: string
     private _pv: number = 0
     private _pvMax: number = 0
@@ -9,10 +10,7 @@ export class Personnage {
 
     constructor(nom: string) {
         this._nom = nom
-        this._pv;
-        this._pvMax;
-        this._defense;
-        this._arme;
+        this._arme = new Arme()
     }
 
     set Nom(param: string) {
@@ -46,6 +44,14 @@ export class Personnage {
         return this._defense
     }
 
+    set Arme(param: Arme) {
+        this._arme = param
+    }
+
+    get Arme() {
+        return this._arme
+    }
+
     // attaquer(cible) {
 
     // }
@@ -53,6 +59,5 @@ export class Personnage {
     cibler() {
 
     }
-
 
 }

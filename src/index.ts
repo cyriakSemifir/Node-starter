@@ -1,6 +1,6 @@
 import { Gentil } from "./classes/gentil";
 import { Mechant } from "./classes/mechant";
-import { Arme } from "./classes/arme";
+import { Combat } from "./classes/combat";
 
 const readline = require('readline');
 const rl = readline.createInterface({
@@ -8,13 +8,17 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-let arme = new Arme();
-
 rl.question('quel est le nom de votre héro ? ', (nom: string) => {
     let hero = new Gentil(nom)
     console.log(hero);
 
     let mechant = new Mechant()
     console.log(mechant);
-});
 
+    let combat = new Combat(hero, mechant)
+
+    while (hero.Pv != 0 && mechant.Pv != 0) {
+        combat.Engagement();
+        combat.Frapper();
+    }
+});

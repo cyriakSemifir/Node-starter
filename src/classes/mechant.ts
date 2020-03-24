@@ -11,8 +11,8 @@ export class Mechant extends Personnage {
 
     creation() {
         this.Nom = this.nomAlea()
-        this.PvMax = 400
-        this.Pv = 400
+        this.PvMax = 300
+        this.Pv = this.PvMax
         this.Defense = 5
     }
 

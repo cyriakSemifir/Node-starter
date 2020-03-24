@@ -14,13 +14,12 @@ export class Gentil extends Personnage {
     constructor(nom: string) {
         super(nom)
 
-        this.creation(nom);
+        this.creation();
     }
 
-    creation(nom: string) {
-        this.Nom = nom
-        this.Pv = 200
+    creation() {
         this.PvMax = 200
+        this.Pv = this.PvMax
         this.Defense = 10
     }
 

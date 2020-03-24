@@ -1,7 +1,7 @@
 export class Arme {
 
-    private _degatMini: number = Math.floor(Math.random() * Math.floor(40) + 1)
-    private _degatMax: number = Math.floor(Math.random() * Math.floor(100) + 1)
+    private _degatMini: number = Math.floor(Math.random() * Math.floor(40 - 1) + 1)
+    private _degatMax: number = Math.floor(Math.random() * Math.floor(100 - 40) + 40)
     private _chanceDeCrit: number = 0.5
     private _nom: string = "marteau"
 
@@ -15,27 +15,27 @@ export class Arme {
         this._degatMax
     }
 
-    setDegatMini(param: number) {
+    set DegatMini(param: number) {
         this._degatMini = param
     }
 
-    getDegatMini() {
+    get DegatMini() {
         return this._degatMini
     }
 
-    setDegatMax(param: number) {
+    set DegatMax(param: number) {
         this._degatMax = param
     }
 
-    getDegatMax() {
+    get DegatMax() {
         return this._degatMax
     }
 
-    setChanceDeCrit(param: number) {
+    set ChanceDeCrit(param: number) {
         this._chanceDeCrit = param
     }
 
-    getChanceDeCrit() {
+    get ChanceDeCrit() {
         return this._chanceDeCrit
     }
 
@@ -46,6 +46,5 @@ export class Arme {
     get Nom() {
         return this._nom
     }
-
 
 }

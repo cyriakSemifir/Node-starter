@@ -13,10 +13,6 @@ class Partie {
         return this.tableMechant
     }
 
-    // ajouter(param: Gentil) {
-    //     this.tableGentil.push(param)
-    // }
-
     creationMechant() {
 
     }
