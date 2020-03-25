@@ -11,8 +11,8 @@ export class Gentil extends Personnage {
 
     //private enum: role
 
-    constructor(nom: string) {
-        super(nom)
+    constructor(nom: string, arme: number) {
+        super(nom, arme)
 
         this.creation();
     }

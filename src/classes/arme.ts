@@ -6,7 +6,6 @@ export class Arme {
     private _nom: string = "marteau"
 
     constructor() {
-        this.creation
     }
 
     creation() {

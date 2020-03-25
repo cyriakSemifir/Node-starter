@@ -1,15 +1,37 @@
-// class CalcArme extends Arme {
+import { Arme } from "./arme";
 
-//     constructor() {
-//         super()
-//     }
+export class CalcArme extends Arme {
 
-//     Arme1() {
-//         this.setChanceDeCrit = (this.getChanceDeCrit + 10);
-//     }
+    constructor(numero: number) {
+        super()
+        this.choixArme(numero)
+        this.creation
 
-//     Arme2() {
-//         let a = this.setDegatMax()
-//         a += this.getDegatMax()
-//     }
-// }
+    }
+
+    Arme1() {
+        this.ChanceDeCrit += 0.2;
+    }
+
+    Arme2() {
+        this.DegatMax += 50;
+    }
+
+    Arme3() {
+        this.ChanceDeCrit -= 0.2;
+    }
+
+    choixArme(numero: number) {
+
+        console.log("valeur de numero : " + numero)
+        if (numero == 1) {
+            this.Arme1();
+        }
+        else if (numero == 2) {
+            this.Arme2()
+        }
+        else {
+            this.Arme3()
+        }
+    }
+}

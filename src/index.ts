@@ -8,17 +8,27 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
+// const r2 = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
+
 rl.question('quel est le nom de votre héro ? ', (nom: string) => {
-    let hero = new Gentil(nom)
-    console.log(hero);
+    rl.question('choisissez votre arme entre 1 et 2', (arme: number) => {
 
-    let mechant = new Mechant()
-    console.log(mechant);
+        let hero = new Gentil(nom, arme)
+        console.log(hero);
 
-    let combat = new Combat(hero, mechant)
+        let mechant = new Mechant()
+        console.log(mechant);
 
-    while (hero.Pv != 0 && mechant.Pv != 0) {
-        combat.Engagement();
-        combat.Frapper();
-    }
+        let combat = new Combat(hero, mechant)
+
+        while (hero.Pv != 0 && mechant.Pv != 0) {
+            combat.Engagement();
+            combat.Frapper();
+        }
+        rl.close();
+    });
+
 });

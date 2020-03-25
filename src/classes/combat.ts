@@ -55,6 +55,12 @@ export class Combat {
         console.log(this._gentil.Nom + " attaque");
         let randFrappe = Math.floor(Math.random() * Math.floor(this._gentil.Arme.DegatMax - this._gentil.Arme.DegatMini) + this._gentil.Arme.DegatMini)
 
+        let crit = Math.random()
+        if (crit < this._gentil.Arme.ChanceDeCrit) {
+            randFrappe *= 2
+            console.log("le gentil à crit")
+        }
+
         this._mechant.Pv -= (randFrappe - this._mechant.Defense)
 
         if (this._mechant.Pv <= 0) {
@@ -70,6 +76,12 @@ export class Combat {
 
         console.log("le méchant attaque");
         let randFrappe = Math.floor(Math.random() * Math.floor(this._mechant.Arme.DegatMax - this._mechant.Arme.DegatMini) + this._mechant.Arme.DegatMini)
+
+        let crit = Math.random()
+        if (crit < this._mechant.Arme.ChanceDeCrit) {
+            randFrappe *= 2
+            console.log("le mechant a crit")
+        }
 
         this._gentil.Pv -= (randFrappe - this._gentil.Defense)
 

@@ -3,15 +3,15 @@ import { Personnage } from "./personnage"
 export class Mechant extends Personnage {
 
 
-    constructor(_nom: string = "") {
-        super(_nom);
+    constructor(_nom: string = "", arme: number = 3) {
+        super(_nom, arme);
 
         this.creation()
     }
 
     creation() {
         this.Nom = this.nomAlea()
-        this.PvMax = 300
+        this.PvMax = 500
         this.Pv = this.PvMax
         this.Defense = 5
     }

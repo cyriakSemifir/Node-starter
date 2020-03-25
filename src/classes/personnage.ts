@@ -1,4 +1,4 @@
-import { Arme } from "./arme"
+import { CalcArme } from "./calcArme"
 
 export class Personnage {
 
@@ -6,11 +6,11 @@ export class Personnage {
     private _pv: number = 0
     private _pvMax: number = 0
     private _defense: number = 0
-    private _arme: Arme
+    private _arme: CalcArme
 
-    constructor(nom: string) {
+    constructor(nom: string, arme: number) {
         this._nom = nom
-        this._arme = new Arme()
+        this._arme = new CalcArme(arme)
     }
 
     set Nom(param: string) {
@@ -44,7 +44,7 @@ export class Personnage {
         return this._defense
     }
 
-    set Arme(param: Arme) {
+    set Arme(param: CalcArme) {
         this._arme = param
     }
 
